@@ -17,10 +17,11 @@ public class HelloWorldController {
 
     @GetMapping("/HelloWorld2/{nom}")
     public String saluda2(@PathVariable(value = "nom", required = false) String nom) {
-        if (nom != null && !nom.isEmpty()) {
+        if (nom != null) {
             return "Hola, " + nom + ". Estàs executant un projecte Maven";
         } else {
             return "Hola, UNKNOWN. Estàs executant un projecte Maven";
         }
     }
+    
 }
